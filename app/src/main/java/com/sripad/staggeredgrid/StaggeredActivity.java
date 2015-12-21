@@ -7,13 +7,19 @@ import android.view.MenuItem;
 
 import com.sripad.staggeredgrid.base.BaseActivity;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class StaggeredActivity extends BaseActivity {
+
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staggered);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this);
         setSupportActionBar(toolbar);
     }
 
