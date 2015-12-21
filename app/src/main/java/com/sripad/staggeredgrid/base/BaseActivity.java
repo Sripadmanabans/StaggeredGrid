@@ -17,7 +17,7 @@ public class BaseActivity extends AppCompatActivity implements SwitchFragment {
     @Override
     public void openFragment(Fragment fragment, boolean addToBackStack, boolean isScrollable) {
         int fragmentContainer;
-        if(isScrollable) {
+        if (isScrollable) {
             if (fragmentScrollableContainerId == null) {
                 throw new NullPointerException("Scrollable container ID has not been initialized " +
                         "to fragmentScrollableContainerId");
@@ -32,14 +32,14 @@ public class BaseActivity extends AppCompatActivity implements SwitchFragment {
                 fragmentContainer = fragmentContainerId;
             }
         }
-        if(fragment != null) {
+        if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
             fragmentTransaction.replace(fragmentContainer, fragment,
                     fragment.getClass().getSimpleName());
 
-            if(addToBackStack) {
+            if (addToBackStack) {
                 fragmentTransaction.addToBackStack(null);
             }
 

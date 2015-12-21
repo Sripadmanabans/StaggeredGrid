@@ -25,7 +25,7 @@
         android:id="@+id/fragment_container_scrolling"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behaviour="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behaviour="@string/appbar_scrolling_view_behavior" />
 
     <FrameLayout
         android:id="@+id/fragment_container_non_scrolling"
