@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
  */
 public class BaseActivity extends AppCompatActivity implements SwitchFragment {
 
-    protected Integer fragmentContainerId = null;
+    protected Integer fragmentNonScrollableContainerId = null;
     protected Integer fragmentScrollableContainerId = null;
 
     @Override
@@ -25,11 +25,11 @@ public class BaseActivity extends AppCompatActivity implements SwitchFragment {
                 fragmentContainer = fragmentScrollableContainerId;
             }
         } else {
-            if (fragmentContainerId == null) {
+            if (fragmentNonScrollableContainerId == null) {
                 throw new NullPointerException("Container Id has not been initialized to " +
                         "fragmentContainerId");
             } else {
-                fragmentContainer = fragmentContainerId;
+                fragmentContainer = fragmentNonScrollableContainerId;
             }
         }
         if (fragment != null) {
