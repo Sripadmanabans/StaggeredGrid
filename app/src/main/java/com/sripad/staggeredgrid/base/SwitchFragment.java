@@ -14,9 +14,7 @@ public interface SwitchFragment {
      * @param fragment       The fragment that needs to be opened.
      * @param addToBackStack A boolean that states if the fragment has to be added to the back
      *                       stack or not.
-     * @param isScrollable   A boolean that helps to use the correct fragment container to manage
-     *                       the behaviour of the layout.
      */
-    void openFragment(Fragment fragment, boolean addToBackStack, boolean isScrollable);
+    void openFragment(Fragment fragment, boolean addToBackStack);
 
 }

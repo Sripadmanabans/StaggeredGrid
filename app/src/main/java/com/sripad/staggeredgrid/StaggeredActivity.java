@@ -20,11 +20,10 @@ public class StaggeredActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staggered);
-        fragmentScrollableContainerId = R.id.fragment_container_scrolling;
-        fragmentNonScrollableContainerId = R.id.fragment_container_non_scrolling;
+        fragmentContainerId = R.id.fragment_container;
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-        openFragment(new GridFragment(), false, true);
+        openFragment(new GridFragment(), false);
     }
 
     @Override
