@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.sripad.staggeredgrid.base.BaseActivity;
+import com.sripad.staggeredgrid.grid.GridFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -19,8 +20,11 @@ public class StaggeredActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staggered);
+        fragmentScrollableContainerId = R.id.fragment_container_scrolling;
+        fragmentNonScrollableContainerId = R.id.fragment_container_non_scrolling;
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
+        openFragment(new GridFragment(), false, true);
     }
 
     @Override
